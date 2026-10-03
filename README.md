@@ -62,12 +62,12 @@ Password: Password123
 
 With the server running, these attacks are expected to **fail**:
 
-- **SQL Injection** — log in with email `' OR '1'='1` and any 8+ char password.
-  The `?` placeholder treats the input as a literal string, so no row matches →
-  `Invalid email or password.`
-- **XSS** — submit email `<img src=x onerror=alert(1)>`. It fails email
-  validation, and even if echoed back it is written with `textContent`, so it
-  renders as plain text and never executes.
+- **SQL Injection** — log in with email `admin@juice.sh' OR '1'='1` and any 8+ char
+  password. The `?` placeholder treats the whole value as a literal string, so no row
+  matches → `Invalid email or password.`
+- **XSS** — submit email `<img src=x onerror=alert(1)>`. It fails email validation, and
+  the server's reply never includes the input, so there is nothing to execute. Even if a
+  value were echoed, messages are written with `textContent`, which renders it as plain text.
 
 ## Weaknesses found in v1 and fixed in v2
 
