@@ -17,7 +17,7 @@ function showMessage(text, type) {
 }
 
 function validate(email, password) {
-  if (!email || !password) return "Please fill in both fields.";
+  if (!email || !password) return "Both fields are required.";
   if (!email.includes("@")) return "Email must contain '@'.";
   if (password.length < 8) return "Password must be at least 8 characters.";
   return null; // valid
