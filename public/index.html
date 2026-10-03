@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Juice Shop – Secure Login</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="card">
+    <h1>🧃 Juice Shop</h1>
+    <h2>Login</h2>
+
+    <form id="loginForm" novalidate>
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" autocomplete="username"
+             placeholder="you@example.com" />
+
+      <label for="password">Password</label>
+      <input type="password" id="password" name="password"
+             autocomplete="current-password" placeholder="••••••••" />
+
+      <button type="submit">Log in</button>
+    </form>
+
+    <!-- Message area. We set textContent (never innerHTML) so injected
+         markup is shown as literal text and never executed. -->
+    <p id="message" role="status" aria-live="polite"></p>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,15 @@
+{
+  "name": "juice-shop-secure-login",
+  "version": "1.0.0",
+  "description": "A secure login form (HTML/JS + Express) inspired by OWASP Juice Shop, with client- and server-side validation, parameterized SQL queries, and bcrypt password hashing.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "better-sqlite3": "^11.8.1",
+    "express": "^4.21.2"
+  }
+}
